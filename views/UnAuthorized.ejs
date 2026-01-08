@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Unauthorized Access</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .unauthorized-box {
+      background-color: #ffffff;
+      padding: 40px 30px;
+      border: 2px solid #ff4d4d;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      max-width: 400px;
+      width: 100%;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .unauthorized-box h1 {
+      font-size: 28px;
+      color: #ff4d4d;
+      margin-bottom: 10px;
+    }
+
+    .unauthorized-box p {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 25px;
+    }
+
+    .unauthorized-box button {
+      padding: 12px 24px;
+      background-color: #3f72af;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .unauthorized-box button:hover {
+       background-color: #2b5fa0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .unauthorized-box {
+        padding: 30px 20px;
+      }
+
+      .unauthorized-box h1 {
+        font-size: 22px;
+      }
+
+      .unauthorized-box p {
+        font-size: 14px;
+      }
+
+      .unauthorized-box button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="unauthorized-box">
+    <h1>Unauthorized Access</h1>
+    <p>You are not authorized to view this page.</p>
+    <button onclick="window.location.href='/'">Back to Home</button>
+  </div>
+</body>
+</html>

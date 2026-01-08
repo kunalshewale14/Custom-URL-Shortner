@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Custom URL Shortener</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 60px; 
+    }
+
+    .main-heading {
+      font-size: 32px;
+      color: #2b2e4a;
+      margin-bottom: 40px; 
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .login-container {
+      background: #ffffff;
+      padding: 40px 35px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 400px;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 24px;
+      color: #3f72af;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #3f72af;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3f72af;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2b5fa0;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #b22222;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .signup-section {
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    .signup-section span {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .signup-section a {
+      color: #3f72af;
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 6px;
+    }
+
+    .signup-section a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding-top: 40px;
+      }
+
+      .main-heading {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      .login-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="main-heading">Welcome to the Custom URL Shortening Service</h1>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form action="/user/login" method="POST">
+      <label for="email">Email</label>
+      <input type="email" required name="email" id="email" placeholder="Enter your email" />
+
+      <label for="password">Password</label>
+      <input type="password" required name="password" id="password" placeholder="Enter your password" />
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="note">You must have an account to use this service.</p>
+
+    <div class="signup-section">
+      <span>Don't have an account?</span>
+      <a href="/signup">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+</html>
